@@ -1,39 +1,16 @@
-# DESIGN TWEAKS
+#!/usr/bin/env bash
 
-# don't do anything when a 'bell' rings
-set -g visual-activity off
-set -g visual-bell off
-set -g visual-silence off
-setw -g monitor-activity off
-set -g bell-action none
+tmux set-option -g status-position top
+tmux set -g status-bg "#282828"
+tmux set -g status-fg white
+tmux set -g status-left ''
+tmux set -g status-right ""
 
-# clock mode
-setw -g clock-mode-colour colour1
+tmux set-window-option -g window-status-separator ''
+tmux set-window-option -g window-status-format '#[bg=#3c3836,fg=white] #I #W '
+tmux set-window-option -g window-status-current-format '#[bg=#504945,fg=brightwhite] #I #W '
 
-# copy mode
-setw -g mode-style 'fg=colour1 bg=colour18 bold'
-
-# pane borders
-set -g pane-border-style 'fg=colour1'
-set -g pane-active-border-style 'fg=colour3'
-
-# statusbar
-set -g status-position top
-set -g status-justify left
-set -g status-style 'fg=colour1'
-set -g status-left ''
-set -g status-right '%Y-%m-%d %H:%M '
-set -g status-right-length 50
-set -g status-left-length 10
-
-setw -g window-status-current-style 'fg=colour0 bg=colour1 bold'
-setw -g window-status-current-format ' #I #W #F '
-
-setw -g window-status-style 'fg=colour1 dim'
-setw -g window-status-format ' #I #[fg=colour7]#W #[fg=colour1]#F '
-
-setw -g window-status-bell-style 'fg=colour2 bg=colour1 bold'
-
-# messages
-set -g message-style 'fg=colour2 bg=colour0 bold'
-
+tmux set -g window-style 'bg=default,fg=white'
+tmux set -g window-active-style 'bg=default,fg=brightwhite'
+tmux set -g pane-border-style 'bg=default,fg=black'
+tmux set -g pane-active-border-style 'bg=default,fg=#504945'
