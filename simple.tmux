@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-tmux set-option -g status-position top
+tmux set-option -g status-position bottom
 tmux set -g status-bg "#282828"
 tmux set -g status-fg white
-tmux set -g status-left ''
+tmux set -g status-left ""
 tmux set -g status-right ""
 
 tmux set-window-option -g window-status-separator ''
@@ -15,5 +15,5 @@ tmux set -g window-active-style 'bg=default,fg=brightwhite'
 tmux set -g pane-border-style 'bg=default,fg=black'
 tmux set -g pane-active-border-style 'bg=default,fg=#504945'
 
-tmux set -g message-style "bg=#50494,fg=white"
+tmux set -g message-style 'bg=#504945,fg=white'
 
